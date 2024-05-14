@@ -129,7 +129,7 @@ ul {
 .aboutUs{
     text-align: justify;
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 40%;
     transform: translate(-50%, -50%);
     color: white;
@@ -143,4 +143,28 @@ ul {
 }
 .aboutUs span{
     font-family: system-ui;
+}
+#team{
+    margin-top:5%;
+    
+}
+#left, #member1, #member2,#member3 {
+    display: inline-block; 
+    *display: inline; 
+    zoom: 1; 
+    vertical-align:middle ; 
+    font-family: system-ui;}
+#left {width: 25%}
+#member1 {width: 23%;margin-right: 20px;}
+#member2 {width:23%;margin-right: 20px;}
+#member3{width:23%}
+#team button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: 20px;
 }
