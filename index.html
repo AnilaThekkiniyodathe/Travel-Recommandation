@@ -4,6 +4,7 @@
     <title>Travel Guide</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./travel_Recommendation.css">
+  <script src="./travel_recommendation.js"></script>
 </head>
 <body style="margin:0px">
       <nav id="header">
@@ -15,7 +16,7 @@
           <li><a href="./contact_us.html" id="contact">Contact Us </a></li>
           <div id="searchbar"> 
           <input type="text" id="searchInput" placeholder="Enter a destination or keyword"><i class="fa fa-search"></i>
-           <button id='btnSearch'>Search</button>
+           <button id='btnSearch' onclick="searchRecommandations()">Search</button>
           <button id='btnReset'>Clear</button> 
         </div>        
         </ul>
@@ -32,6 +33,7 @@
                 <div style="width:300px;line-height:18px">It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes, while pursuing the desired destination that capitivates the heart and ignites a sense of wonder.</div>
                 <button>Book Now</button>
               </div>
+            <div id="result"></div>
         </div>
 
 </body>
