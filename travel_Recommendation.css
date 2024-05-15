@@ -150,7 +150,6 @@ ul {
 }
 #left, #member1, #member2,#member3 {
     display: inline-block; 
-    *display: inline; 
     zoom: 1; 
     vertical-align:middle ; 
     font-family: system-ui;}
@@ -161,10 +160,63 @@ ul {
 #team button{
     background-color: black;
     color: white;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     padding: 5px;
     margin-top: 20px;
 }
+#contactForm{
+    display: inline-block; 
+    zoom: 1; 
+    vertical-align:middle ; 
+    font-family: system-ui;}
+
+    #contactUS{
+        text-align: justify;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+    .contactUS h1{
+        font-weight:bolder; 
+        font-size: 55px;
+        line-height:70px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #contactForm{
+        text-align: justify;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-10%, -50%);
+        color: white;
+    }
+    #contactForm input{
+        width: 300%;
+        background-color: transparent;
+        height: 25px;
+        border: 2px solid #ccc;
+    }
+    textarea{
+        width: 300%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: transparent;
+        resize: none;
+    }
+    #contactForm button{
+        background-color: #04AA6D;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 30px;
+    width:300%
+    }
