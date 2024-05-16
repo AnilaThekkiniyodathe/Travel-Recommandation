@@ -1,6 +1,6 @@
 function searchRecommandations(){
     const input = document.getElementById('searchInput').value.toLowerCase();
-    const resultDiv = document.getElementById('result');
+    const resultDiv = document.getElementById('displayResult');
     resultDiv.innerHTML = '';
 
     fetch('travel_recommendation_api.json')
@@ -21,14 +21,14 @@ function searchRecommandations(){
        
         function recommandationResult(keywords){
         keywords.forEach(function(keyword) {
+          resultDiv.style.backgroundColor = 'white';
           const name = keyword.name;
           const imageUrl = keyword.imageUrl;
           const description = keyword.description;
-          
           resultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">`;
-          resultDiv.innerHTML += `<h4 style="font-weight:500">${name}</h4>`;          
-          resultDiv.innerHTML += `<p>${description}</p>`;
-          
+          resultDiv.innerHTML += `<h3 style="font-weight:500;margin-left:20px;margin-bottom:-10px">${name}</h3>`;          
+          resultDiv.innerHTML += `<p style="margin-left:20px">${description}</p><br>`;
+          resultDiv.innerHTML += `<button style="margin-left:20px">Visit</button><br>`;
           })
         }
         } )
