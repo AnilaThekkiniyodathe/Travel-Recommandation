@@ -1,4 +1,4 @@
-let contactList=[];
+
 function searchRecommandations(){
     const input = document.getElementById('searchInput').value.toLowerCase();
     const resultDiv = document.getElementById('result');
@@ -42,12 +42,13 @@ function searchRecommandations(){
               citilist.forEach(function(city){
               const name = city.name;
               const imageUrl = city.imageUrl;
-              const description = city.description;
-              resultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">
-              <div style="background-color:white;margin-top: -23px;
-              margin-bottom: 10px;"><h3 style="font-weight:500;margin-left:20px;margin-bottom:-10px">${name}</h3>         
-              <p style="margin-left:20px;margin-bottom:-10px">${description}</p><br>
-              <button style="margin-left:20px;margin-bottom:5px">Visit</button><br></div>`;
+              const description = city.description;              
+              const countryresultDiv = document.getElementById('countryResult');
+              countryresultDiv.style.visibility='visible';
+              countryresultDiv.innerHTML += `<img src="${imageUrl}" alt="hjh">
+              <span style="margin-left:-100px;"><h3 style="font-weight:500;margin-bottom:-10px;margin-top:5px">${name}</h3>         
+              <p style="margin-bottom:-10px">${description}</p><br>
+              <button style="margin-bottom:5px">Visit</button><br></span>`;
               })  
             })
             }
@@ -81,7 +82,7 @@ function clearInputs(){
     document.getElementById('message').value = '';
 }
 function clearRecommandations(){    
-   // const input = document.getElementById('searchInput').value.toLowerCase();
-    //input.innerHTML="";
+    document.getElementById('searchInput').value = '';
     document.getElementById('result').innerHTML = '';
+    document.getElementById('countryResult').innerHTML = '';
 }
